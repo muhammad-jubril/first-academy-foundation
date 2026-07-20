@@ -2,645 +2,305 @@
 <html lang="en">
 
 <head>
-  
   <meta charset="UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>First Academy Foundation Nursery, Primary & Secondary School</title>
-  
+  <title>First Academy Foundation | Nursery, Primary & Secondary School, Lagos</title>
+  <meta name="description" content="First Academy Foundation Nursery, Primary & Secondary School in Ajegunle Apapa, Lagos — quality education, strong values and modern facilities for every child.">
+
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <meta property="og:title" content="First Academy Foundation | Nursery, Primary & Secondary School, Lagos">
+  <meta property="og:description" content="First Academy Foundation Nursery, Primary & Secondary School in Ajegunle Apapa, Lagos — quality education, strong values and modern facilities for every child.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  
 </head>
 
 <body>
-  
-  <!-- ===========================
-         HEADER
-    ============================ -->
-  
-  <header>
-    
-    <nav>
-      
-      <div class="logo">
-        
-        <img src="images/logo.png" alt="School Logo">
-        
-        <div class="logo-text">
-          
-          <h2>First Academy Foundation</h2>
-          
-          <p>Knowledge is Wisdom</p>
-          
-        </div>
-        
-      </div>
-      
-      <input type="checkbox" id="menu-toggle">
-      
-      <label for="menu-toggle" class="menu-icon">
-      
-        ☰
-        
-      </label>
-      
-      <ul class="nav-links">
-        
-        <li><a href="#home">Home</a></li>
-        
-        <li><a href="#about">About</a></li>
-        
-        <li><a href="#academics">Academics</a></li>
-        
-        <li><a href="#facilities">Facilities</a></li>
-        
-        <li><a href="#gallery">Gallery</a></li>
-        
-        <li><a href="#contact">Contact</a></li>
-        
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <ul class="topbar-info">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+          <span>49 Alayabiagba Street, Ajegunle Apapa, Lagos</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-.9 1.6-1.8 1.4C9.8 18.3 5.7 14.2 4.1 7.8 3.9 6.9 4.5 6 5.5 6"/></svg>
+          <a href="tel:+2348030772462">+234 803 077 2462</a>
+        </li>
       </ul>
-      
+      <ul class="topbar-social" aria-label="Social media">
+        <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8.5h2V5.3c-.4-.1-1.6-.2-2.9-.2-2.9 0-4.6 1.7-4.6 4.8v2.4H6.8V16h2.7v8h3.3v-8h2.8l.4-3.7h-3.2V10c0-1 .3-1.5 1.2-1.5z"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5v-5z" fill="currentColor" stroke="none"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header id="site-header">
+    <nav class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="First Academy Foundation logo">
+        <span class="logo-text">
+          <strong>First Academy Foundation</strong>
+          <em>Knowledge is Wisdom</em>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-overlay" id="nav-overlay"></div>
+
+      <ul class="nav-links" id="nav-links">
+        <li class="close-mobile-nav">
+          <button id="close-menu" aria-label="Close menu">&times;</button>
+        </li>
+        <li><a href="index.html" class="nav-link is-active"><span class="nav-icon">🏠</span>Home</a></li>
+        <li><a href="about.html" class="nav-link"><span class="nav-icon">📖</span>About</a></li>
+        <li><a href="admissions.html" class="nav-link"><span class="nav-icon">🎓</span>Admissions</a></li>
+        <li class="has-dropdown">
+          <a href="academics.html" class="nav-link"><span class="nav-icon">📚</span>Academics</a>
+          <ul class="dropdown">
+            <li><a href="academics.html#nursery">Nursery School</a></li>
+            <li><a href="academics.html#primary">Primary School</a></li>
+            <li><a href="academics.html#secondary">Secondary School</a></li>
+          </ul>
+        </li>
+        <li><a href="gallery.html" class="nav-link"><span class="nav-icon">🖼️</span>Gallery</a></li>
+        <li><a href="news.html" class="nav-link"><span class="nav-icon">📰</span>News & Events</a></li>
+        <li><a href="contact.html" class="nav-link"><span class="nav-icon">📞</span>Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Apply Now</a></li>
+      </ul>
     </nav>
-    
   </header>
-  
-  <!-- ===========================
-         HERO SECTION
-    ============================ -->
-  
-  <section class="hero" id="home">
-    
-    <div class="hero-content">
-      
-      <h3>Inspiring Excellence. Building Character.</h3>
-      
-      <h1>
-        
-        First Academy Foundation
-        
-      </h1>
-      
-      <h2>
-        
-        Nursery, Primary & Secondary School
-        
-      </h2>
-      
-      <p class="motto">
-        
-        Knowledge is Wisdom
-        
-      </p>
-      
-      <p class="hero-text">
-        
-        Providing quality education in a caring,
-        safe and inspiring environment where
-        every child is encouraged to grow,
-        discover and succeed.
-        
-      </p>
-      
-      <div class="hero-buttons">
-        
-        <a href="#about" class="btn">
-        
-          Explore Our School
-          
-        </a>
-        
-        <a href="#contact" class="btn-outline">
-        
-          Enroll Now
-          
-        </a>
-        
+
+  <main id="main">
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-light">Inspiring Excellence &middot; Building Character</p>
+        <h1>First Academy Foundation</h1>
+        <p class="hero-sub">Nursery, Primary &amp; Secondary School</p>
+        <p class="motto">&ldquo;Knowledge is Wisdom&rdquo;</p>
+        <p class="hero-text">
+          Providing quality education in a caring, safe and inspiring
+          environment where every child is encouraged to grow, discover
+          and succeed.
+        </p>
+        <div class="hero-buttons">
+          <a href="about.html" class="btn">Explore Our School</a>
+          <a href="admissions.html" class="btn-outline">Enroll Now</a>
+        </div>
       </div>
-      
+      <a href="#about-teaser" class="scroll-cue" aria-label="Scroll to content">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <div class="info-strip">
+      <div class="container info-strip-grid">
+        <div class="info-strip-item">
+          <span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.3-7-11.5A7 7 0 0 1 19 9.5C19 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg></span>
+          <div><h3>Our Location</h3><p>49 Alayabiagba Street, Ajegunle Apapa, Lagos</p></div>
+        </div>
+        <div class="info-strip-item">
+          <span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-.9 1.6-1.8 1.4C9.8 18.3 5.7 14.2 4.1 7.8 3.9 6.9 4.5 6 5.5 6"/></svg></span>
+          <div><h3>Call Us</h3><p><a href="tel:+2348030772462">+234 803 077 2462</a></p></div>
+        </div>
+        <div class="info-strip-item">
+          <span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 9.5h16M8 3v3M16 3v3"/></svg></span>
+          <div><h3>Admissions</h3><p>Open for New Enrollment</p></div>
+        </div>
+      </div>
     </div>
-    
-  </section>
-  <!-- ===========================
-         ABOUT SECTION
-    ============================ -->
 
-    <section class="about" id="about">
+    <section class="about" id="about-teaser">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="images/parents.jpg" alt="Parents and community at First Academy Foundation">
+          <div class="about-image-tag"><strong>15+</strong><span>Years shaping futures</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">About Us</p>
+          <h2>Welcome to First Academy Foundation</h2>
+          <p>First Academy Foundation Nursery, Primary &amp; Secondary School is dedicated to nurturing young minds through quality education, strong moral values, creativity and academic excellence.</p>
+          <p>We believe every child has the potential to succeed when provided with the right environment, dedicated teachers and modern learning facilities.</p>
+          <a href="about.html" class="text-link">More about our school &rarr;</a>
+        </div>
+      </div>
+    </section>
 
+    <section class="statistics">
+      <div class="container stats-container">
+        <div class="stat-card"><h2><span class="counter" data-target="500">0</span>+</h2><p>Students</p></div>
+        <div class="stat-card"><h2><span class="counter" data-target="30">0</span>+</h2><p>Qualified Teachers</p></div>
+        <div class="stat-card"><h2><span class="counter" data-target="15">0</span>+</h2><p>Years of Excellence</p></div>
+        <div class="stat-card"><h2><span class="counter" data-target="100">0</span>%</h2><p>Safe Learning Environment</p></div>
+      </div>
+    </section>
+
+    <section class="academics">
+      <div class="container">
+        <p class="eyebrow">Academics</p>
+        <h2>Our Academic Sections</h2>
+        <p class="section-text">A clear academic pathway from a child's very first class to their final year.</p>
+        <div class="academic-grid">
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.8 0-5 2.2-5 5 0 3 2.2 6 5 9 2.8-3 5-6 5-9 0-2.8-2.2-5-5-5z"/><circle cx="12" cy="8" r="2"/></svg></span>
+            <h3>Nursery School</h3>
+            <p>A caring environment where every child begins learning through creativity, play and confidence.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5v-13z"/></svg></span>
+            <h3>Primary School</h3>
+            <p>Building strong academic foundations while developing discipline, confidence and leadership.</p>
+          </article>
+          <article class="card">
+            <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5z"/><path d="M6 11.7v4.3c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.3"/><path d="M20 9.5V15"/></svg></span>
+            <h3>Secondary School</h3>
+            <p>Preparing students for higher education and a successful future.</p>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:34px;"><a href="academics.html" class="text-link">See full academic details &rarr;</a></p>
+      </div>
+    </section>
+
+    <section class="teacher-banner">
+      <img src="images/teachers-day.jpg" alt="Teachers of First Academy Foundation celebrating Teachers' Day">
+      <div class="teacher-banner-overlay">
         <div class="container">
-
-            <h2>Welcome to First Academy Foundation</h2>
-
-            <p>
-
-                First Academy Foundation Nursery, Primary &
-                Secondary School is dedicated to nurturing
-                young minds through quality education,
-                strong moral values, creativity and
-                academic excellence.
-
-            </p>
-
-            <p>
-
-                We believe every child has the potential to
-                succeed when provided with the right
-                environment, dedicated teachers and modern
-                learning facilities.
-
-            </p>
-
+          <p class="eyebrow eyebrow-light">Our People</p>
+          <h2>Taught by Teachers Who Care</h2>
+          <p>Every classroom at First Academy Foundation is led by a qualified, dedicated teacher committed to the growth of every child.</p>
         </div>
-
+      </div>
     </section>
 
-    <!-- ===========================
-         MESSAGE FROM THE PROPRIETRESS
-    ============================ -->
-
-    <section class="proprietress">
-
-        <div class="container message-container">
-
-            <div class="message-image">
-
-                <img src="images/proprietress.jpg"
-                alt="Proprietress">
-
-            </div>
-
-            <div class="message-text">
-
-                <h2>
-
-                    A Message from the Proprietress
-
-                </h2>
-
-                <p>
-
-                    Welcome to First Academy Foundation
-                    Nursery, Primary & Secondary School.
-
-                </p>
-
-                <p>
-
-                    Our mission is to provide every child
-                    with quality education, excellent
-                    character and lifelong values that
-                    prepare them to become responsible
-                    leaders of tomorrow.
-
-                </p>
-
-                <p>
-
-                    We are committed to creating a safe,
-                    inspiring and caring environment where
-                    every learner can grow academically,
-                    socially and morally.
-
-                </p>
-
-                <h3>
-
-                    — Founder & Proprietress
-            
-
-                </h3>
-
-            </div>
-
+    <section class="values">
+      <div class="container">
+        <p class="eyebrow">What We Stand For</p>
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+          <div class="value-card"><span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.9l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 3.5z"/></svg></span><h3>Excellence</h3></div>
+          <div class="value-card"><span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-4 3 3 4-4 3 3 4-4"/><path d="M3 12v5a2 2 0 0 0 2 2h1M21 12v5a2 2 0 0 1-2 2h-1"/></svg></span><h3>Integrity</h3></div>
+          <div class="value-card"><span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.6-9.4-9.4C1.4 7.7 3.2 5 6.3 5c1.9 0 3.3 1 4.7 2.8C12.4 6 13.8 5 15.7 5c3.1 0 4.9 2.7 3.7 6.1C17.5 15.9 12 20.5 12 20.5z"/></svg></span><h3>Respect</h3></div>
+          <div class="value-card"><span class="icon-badge icon-badge-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z"/></svg></span><h3>Leadership</h3></div>
         </div>
-
+      </div>
     </section>
-<!-- ===========================
-         SCHOOL STATISTICS
-    ============================ -->
 
-<section class="statistics">
-  
-  <div class="container stats-container">
-    
-    <div class="stat-card">
-      <h2>500+</h2>
-      <p>Students</p>
-    </div>
-    
-    <div class="stat-card">
-      <h2>30+</h2>
-      <p>Qualified Teachers</p>
-    </div>
-    
-    <div class="stat-card">
-      <h2>15+</h2>
-      <p>Years of Excellence</p>
-    </div>
-    
-    <div class="stat-card">
-      <h2>100%</h2>
-      <p>Safe Learning Environment</p>
-    </div>
-    
-  </div>
-  
-</section>
+    <section class="quote">
+      <div class="container">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <h2>Knowledge is Wisdom</h2>
+        <p>At First Academy Foundation, we believe education goes beyond the classroom. We inspire excellence, build character, and prepare every child for a bright future.</p>
+      </div>
+    </section>
 
-<!-- ===========================
-         ACADEMICS
-    ============================ -->
-
-<section class="academics" id="academics">
-  
-  <div class="container">
-    
-    <h2>Our Academic Sections</h2>
-    
-    <div class="academic-grid">
-      
-      <div class="card">
-        
-        <span class="icon">👶</span>
-        
-        <h3>Nursery School</h3>
-        
-        <p>
-          
-          A caring environment where every
-          child begins learning through
-          creativity, play and confidence.
-          
-        </p>
-        
-      </div>
-      
-      <div class="card">
-        
-        <span class="icon">📚</span>
-        
-        <h3>Primary School</h3>
-        
-        <p>
-          
-          Building strong academic foundations
-          while developing discipline,
-          confidence and leadership.
-          
-        </p>
-        
-      </div>
-      
-      <div class="card">
-        
-        <span class="icon">🎓</span>
-        
-        <h3>Secondary School</h3>
-        
-        <p>
-          
-          Preparing students for higher
-          education and a successful future.
-          
-        </p>
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  
-</section>
-
-<!-- ===========================
-         OUR CORE VALUES
-    ============================ -->
-
-<section class="values">
-  
-  <div class="container">
-    
-    <h2>Our Core Values</h2>
-    
-    <div class="values-grid">
-      
-      <div class="value-card">
-        
-        📚
-        
-        <h3>Excellence</h3>
-        
-      </div>
-      
-      <div class="value-card">
-        
-        🤝
-        
-        <h3>Integrity</h3>
-        
-      </div>
-      
-      <div class="value-card">
-        
-        ❤️
-        
-        <h3>Respect</h3>
-        
-      </div>
-      
-      <div class="value-card">
-        
-        🌍
-        
-        <h3>Leadership</h3>
-        
-      </div>
-      
-    </div>
-    
-  </div>
-  
-</section>
-
-<!-- ===========================
-         WHY CHOOSE US
-    ============================ -->
-
-<section class="why-us">
-  
-  <div class="container">
-    
-    <h2>Why Choose Us?</h2>
-    
-    <div class="features-grid">
-      
-      <div class="feature-card">
-        👩‍🏫
-        <h3>Qualified Teachers</h3>
-      </div>
-      
-      <div class="feature-card">
-        💻
-        <h3>ICT Education</h3>
-      </div>
-      
-      <div class="feature-card">
-        🛡️
-        <h3>Safe Environment</h3>
-      </div>
-      
-      <div class="feature-card">
-        ⚽
-        <h3>Sports & Recreation</h3>
-      </div>
-      
-      <div class="feature-card">
-        ❤️
-        <h3>Moral Values</h3>
-      </div>
-      
-      <div class="feature-card">
-        🚌
-        <h3>School Transport</h3>
-      </div>
-      
-    </div>
-    
-  </div>
-  
-</section>
-<!-- ===========================
-         OUR FACILITIES
-    ============================ -->
-
-<section class="facilities" id="facilities">
-    
-    <div class="container">
-        
-        <h2>Our Facilities</h2>
-        
-        <div class="facility-grid">
-            
-            <div class="facility-card">
-                
-                <span class="icon">💻</span>
-                
-                <h3>Computer Laboratory</h3>
-                
-                <p>
-                    Modern ICT facilities that prepare
-                    students for today's digital world.
-                </p>
-                
-            </div>
-            
-            <div class="facility-card">
-                
-                <span class="icon">🧪</span>
-                
-                <h3>Science Laboratory</h3>
-                
-                <p>
-                    Practical learning experiences
-                    that make science exciting.
-                </p>
-                
-            </div>
-            
-            <div class="facility-card">
-                
-                <span class="icon">📚</span>
-                
-                <h3>Modern Library</h3>
-                
-                <p>
-                    A peaceful place where reading,
-                    research and imagination grow.
-                </p>
-                
-            </div>
-            
-            <div class="facility-card">
-                
-                <span class="icon">⚽</span>
-                
-                <h3>Sports & Recreation</h3>
-                
-                <p>
-                    Helping students stay healthy,
-                    active and confident.
-                </p>
-                
-            </div>
-            
-            <div class="facility-card">
-                
-                <span class="icon">🚌</span>
-                
-                <h3>School Transportation</h3>
-                
-                <p>
-                    Safe and reliable transportation
-                    for our students.
-                </p>
-                
-            </div>
-            
-            <div class="facility-card">
-                
-                <span class="icon">🛡️</span>
-                
-                <h3>Safe Learning Environment</h3>
-                
-                <p>
-                    A secure, caring and supportive
-                    atmosphere for every learner.
-                </p>
-                
-            </div>
-            
+    <section class="testimonials">
+      <div class="container">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What Our School Community Says</h2>
+        <p class="section-text">Sample placeholder quotes — swap these for real feedback from your parents and students.</p>
+        <div class="testimonial-track">
+          <div class="testimonial-card">
+            <span class="quote-mark quote-mark-sm" aria-hidden="true">&ldquo;</span>
+            <p>My child has grown so much in confidence since joining First Academy Foundation. The teachers genuinely care.</p>
+            <div class="testimonial-author"><span class="avatar-initial">P</span><div><strong>Parent</strong><span>Primary Section</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <span class="quote-mark quote-mark-sm" aria-hidden="true">&ldquo;</span>
+            <p>The school balances discipline with genuine warmth. It feels like a second home for our children.</p>
+            <div class="testimonial-author"><span class="avatar-initial">P</span><div><strong>Parent</strong><span>Nursery Section</span></div></div>
+          </div>
+          <div class="testimonial-card">
+            <span class="quote-mark quote-mark-sm" aria-hidden="true">&ldquo;</span>
+            <p>I loved the computer lab and how our teachers always pushed us to aim higher every term.</p>
+            <div class="testimonial-author"><span class="avatar-initial">S</span><div><strong>Student</strong><span>Secondary Section</span></div></div>
+          </div>
         </div>
-        
-    </div>
-    
-</section>
+      </div>
+    </section>
 
-<!-- ===========================
-         SCHOOL MOTTO
-    ============================ -->
+    <section class="cta-banner">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">Admissions</p>
+        <h2>Admissions Open for New Enrollment</h2>
+        <p>Give your child the opportunity to grow academically, morally and socially in a nurturing learning environment.</p>
+        <a href="admissions.html" class="btn btn-light">See How to Apply</a>
+      </div>
+    </section>
 
-<section class="quote">
-    
-    <div class="container">
-        
-        <h2>"Knowledge is Wisdom"</h2>
-        
-        <p>
-            
-            At First Academy Foundation, we believe
-            education goes beyond the classroom.
-            We inspire excellence, build character,
-            and prepare every child for a bright future.
-            
-        </p>
-        
-    </div>
-    
-</section>
+  </main>
 
-<!-- ===========================
-         GALLERY
-    ============================ -->
-
-<section class="gallery" id="gallery">
-    
-    <div class="container">
-        
-        <h2>Life at First Academy Foundation</h2>
-        
-        <p class="section-text">
-            
-            A glimpse into our learning environment
-            and memorable school moments.
-            
-        </p>
-        
-        <div class="gallery-grid">
-            
-            <img src="images/graduation.jpg" alt="Graduation Ceremony">
-            
-            <img src="images/teachers-day.jpg" alt="Teachers' Day Celebration">
-            
-            <img src="images/parents.jpg" alt="Our Parents">
-            
-        </div>
-        
-    </div>
-    
-</section>
-
-<!-- ===========================
-         ADMISSIONS
-    ============================ -->
-
-<section class="admissions">
-    
-    <div class="container">
-        
-        <h2>Admissions Open</h2>
-        
-        <p>
-            
-            Give your child the opportunity to grow
-            academically, morally and socially in a
-            nurturing learning environment.
-            
-        </p>
-        
-        <a href="#contact" class="btn">
-        
-            Apply for Admission
-            
-        </a>
-        
-    </div>
-    
-</section>
-
-<!-- ===========================
-         CONTACT
-    ============================ -->
-
-<section class="contact" id="contact">
-    
-    <div class="container">
-        
-        <h2>Contact Us</h2>
-        
-        <p><strong>📍 Address:</strongs> 49, Alayabiagba Street, Ajegunle Apapa, Lagos.</p>
-        
-        <p><strong>📞 Phone:</strong> +234 803 077 2462</p>
-        
-    
-</section>
-
-<!-- ===========================
-         FOOTER
-    ============================ -->
-
-<footer>
-    
-    <div class="container">
-        
-        <h3>
-            
-            First Academy Foundation
-            
-        </h3>
-        
-        <p>
-            
-            Nursery, Primary & Secondary School
-            
-        </p>
-        
-        <p>
-            
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <img src="images/logo.png" alt="First Academy Foundation logo">
+          <span class="logo-text">
+            <strong>First Academy Foundation</strong>
             <em>Knowledge is Wisdom</em>
-            
-        </p>
-        
-        <p class="copyright">
-            
-            © 2026 First Academy Foundation.
-            All Rights Reserved.
-            
-        </p>
-        
-    </div>
-    
-</footer>
+          </span>
+        </a>
+        <p>Nurturing young minds through quality education, strong values and modern facilities.</p>
+        <ul class="topbar-social footer-social" aria-label="Social media">
+          <li><a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8.5h2V5.3c-.4-.1-1.6-.2-2.9-.2-2.9 0-4.6 1.7-4.6 4.8v2.4H6.8V16h2.7v8h3.3v-8h2.8l.4-3.7h-3.2V10c0-1 .3-1.5 1.2-1.5z"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5l4.5 2.5-4.5 2.5v-5z" fill="currentColor" stroke="none"/></svg></a></li>
+        </ul>
+      </div>
 
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="academics.html">Academics</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Academics</h3>
+        <ul>
+          <li><a href="academics.html#nursery">Nursery School</a></li>
+          <li><a href="academics.html#primary">Primary School</a></li>
+          <li><a href="academics.html#secondary">Secondary School</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Contact</h3>
+        <ul>
+          <li>49 Alayabiagba Street, Ajegunle Apapa, Lagos</li>
+          <li><a href="tel:+2348030772462">+234 803 077 2462</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="copyright">&copy; <span id="year"></span> First Academy Foundation. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6M6 12l6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
