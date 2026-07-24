@@ -1,0 +1,91 @@
+/* Admin portal — reuses design tokens from styles.css */
+
+.admin-body{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--green-deep);
+    padding:24px;
+}
+
+.admin-card{
+    background:var(--white);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-lg);
+    padding:44px 34px;
+    width:100%;
+    max-width:400px;
+}
+.admin-card .logo-row{
+    display:flex; align-items:center; gap:12px; margin-bottom:28px; justify-content:center;
+}
+.admin-card .logo-row img{ width:40px; height:40px; }
+.admin-card .logo-row span{ font-family:var(--font-display); font-weight:600; color:var(--green-dark); font-size:1.1rem; }
+.admin-card h1{ text-align:center; font-size:1.3rem; margin-bottom:8px; }
+.admin-card .admin-sub{ text-align:center; color:var(--ink-soft); font-size:.9rem; margin-bottom:26px; }
+
+.admin-form-row{ margin-bottom:18px; display:flex; flex-direction:column; gap:7px; }
+.admin-form-row label{ font-size:.82rem; font-weight:600; color:var(--ink); }
+.admin-form-row input, .admin-form-row textarea, .admin-form-row select{
+    border:1.5px solid var(--line); border-radius:10px; padding:12px 14px;
+    font:inherit; color:var(--ink); background:var(--cream); resize:vertical;
+}
+.admin-form-row input:focus, .admin-form-row textarea:focus{ outline:none; border-color:var(--green); }
+
+.admin-error{ color:#C0392B; font-size:.85rem; text-align:center; min-height:18px; margin-bottom:10px; }
+.admin-note{ text-align:center; font-size:.78rem; color:var(--ink-faint,#8A8E85); margin-top:18px; }
+
+/* Dashboard layout */
+
+.admin-shell{ background:var(--surface); min-height:100vh; }
+.admin-topbar{
+    background:var(--green-deep); color:var(--white);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+}
+.admin-topbar .logo-row{ display:flex; align-items:center; gap:10px; }
+.admin-topbar .logo-row img{ width:32px; height:32px; }
+.admin-topbar strong{ font-family:var(--font-display); font-size:1.05rem; }
+.admin-logout{ background:rgba(255,255,255,.1); color:var(--white); padding:9px 18px; border-radius:999px; font-size:.85rem; font-weight:600; }
+.admin-logout:hover{ background:rgba(255,255,255,.18); }
+
+.admin-main{ max-width:980px; margin:0 auto; padding:40px 20px 80px; }
+.admin-panel{
+    background:var(--white); border-radius:var(--radius-md); box-shadow:var(--shadow-sm);
+    padding:30px 26px; margin-bottom:30px;
+}
+.admin-panel h2{ font-size:1.15rem; margin-bottom:20px; }
+
+.admin-grid-2{ display:grid; grid-template-columns:1fr; gap:16px; }
+@media(min-width:640px){ .admin-grid-2{ grid-template-columns:1fr 1fr; } }
+
+.admin-checkbox-row{ display:flex; align-items:center; gap:10px; margin-bottom:18px; }
+.admin-checkbox-row input{ width:18px; height:18px; }
+
+.admin-form-actions{ display:flex; gap:12px; }
+.admin-btn-cancel{ background:var(--surface); color:var(--ink-soft); padding:14px 24px; border-radius:999px; font-weight:600; border:1px solid var(--line); }
+
+.admin-post-list{ display:flex; flex-direction:column; gap:14px; }
+.admin-post-row{
+    display:flex; gap:16px; align-items:center;
+    border:1px solid var(--line); border-radius:var(--radius-sm); padding:14px;
+}
+.admin-post-row img{ width:64px; height:64px; object-fit:cover; border-radius:8px; flex-shrink:0; }
+.admin-post-info{ flex:1; min-width:0; }
+.admin-post-info h3{ font-size:.98rem; margin-bottom:3px; }
+.admin-post-info p{ color:var(--ink-soft); font-size:.82rem; }
+.admin-badge{ font-size:.7rem; font-weight:700; padding:4px 10px; border-radius:999px; text-transform:uppercase; letter-spacing:.03em; }
+.admin-badge.published{ background:var(--green-tint); color:var(--green); }
+.admin-badge.draft{ background:#FBEFD8; color:var(--gold-deep); }
+.admin-post-actions{ display:flex; gap:8px; flex-shrink:0; }
+.admin-icon-btn{
+    width:36px; height:36px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+    background:var(--surface); color:var(--ink-soft); transition:background .2s, color .2s;
+}
+.admin-icon-btn:hover{ background:var(--green-tint); color:var(--green); }
+.admin-icon-btn.danger:hover{ background:#FDEAE8; color:#C0392B; }
+.admin-status{ font-size:.85rem; text-align:center; min-height:18px; margin-top:14px; font-weight:600; }
+.admin-status.success{ color:var(--green); }
+.admin-status.error{ color:#C0392B; }
+  
