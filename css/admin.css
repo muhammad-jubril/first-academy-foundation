@@ -1,5 +1,9 @@
 /* Admin portal — reuses design tokens from styles.css */
 
+/* Admin pages have no site <header>, so cancel the global body
+   top-padding that compensates for the fixed header elsewhere */
+.admin-body, .admin-shell{ padding-top:0; }
+
 .admin-body{
     min-height:100vh;
     display:flex;
@@ -88,4 +92,3 @@
 .admin-status{ font-size:.85rem; text-align:center; min-height:18px; margin-top:14px; font-weight:600; }
 .admin-status.success{ color:var(--green); }
 .admin-status.error{ color:#C0392B; }
-  
