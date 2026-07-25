@@ -25,7 +25,7 @@ using (is_published = true);
 
 -- 4. A logged-in admin can read every post, including unpublished drafts
 create policy "Admin can read all posts"
-on news_posts for select 
+on news_posts for select
 to authenticated
 using (true);
 
