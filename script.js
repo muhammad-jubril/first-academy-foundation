@@ -145,8 +145,10 @@
     });
   });
 
-  /* ---------- Gallery lightbox ---------- */
-  var galleryItems = document.querySelectorAll(".gallery-item");
+  /* ---------- Gallery lightbox ----------
+     Uses event delegation on document, not per-item listeners,
+     so it also works for gallery items injected later by
+     gallery-loader.js / gallery-preview-loader.js. */
   var lightbox = document.getElementById("lightbox");
   var lightboxImg = document.getElementById("lightbox-img");
   var lightboxCaption = document.getElementById("lightbox-caption");
@@ -166,10 +168,9 @@
     lightboxImg.src = "";
     document.body.style.overflow = "";
   }
-  galleryItems.forEach(function (item) {
-    item.addEventListener("click", function () {
-      openLightbox(item.getAttribute("data-full"), item.getAttribute("data-caption"));
-    });
+  document.addEventListener("click", function (e) {
+    var item = e.target.closest && e.target.closest(".gallery-item");
+    if (item) openLightbox(item.getAttribute("data-full"), item.getAttribute("data-caption"));
   });
   lightboxClose && lightboxClose.addEventListener("click", closeLightbox);
   lightbox && lightbox.addEventListener("click", function (e) {
@@ -225,8 +226,32 @@
         return;
       }
 
-      status.textContent = "Thanks, " + name.split(" ")[0] + " — your message is ready to send once a backend is connected.";
-      form.reset();
+      var submitBtn = form.querySelector("button[type='submit']");
+      var originalBtnText = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending\u2026"; }
+      status.textContent = "";
+      status.style.color = "";
+
+      var ajaxAction = form.action.replace("formsubmit.co/", "formsubmit.co/ajax/");
+      var formData = new FormData(form);
+
+      fetch(ajaxAction, {
+        method: "POST",
+        body: formData,
+        headers: { "Accept": "application/json" }
+      })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Request failed");
+          status.textContent = "Thanks, " + name.split(" ")[0] + " — your message has been sent!";
+          form.reset();
+        })
+        .catch(function () {
+          status.style.color = "#C0392B";
+          status.textContent = "Sorry, something went wrong sending that. Please call or WhatsApp us instead.";
+        })
+        .finally(function () {
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnText; }
+        });
     });
   }
 

@@ -49,6 +49,7 @@
           <li><a href="gallery.html" class="nav-link"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17.5l5-5 3.5 3.5 3-3L20.5 17"/></svg></span>Gallery</a></li>
           <li><a href="news.html" class="nav-link"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.5h11a1.5 1.5 0 0 1 1.5 1.5v11.5H6a1.5 1.5 0 0 1-1.5-1.5V5.5z"/><path d="M17 8.5h2a1 1 0 0 1 1 1V17a1.5 1.5 0 0 1-1.5 1.5"/><path d="M7.5 9h5M7.5 12h5M7.5 15h3.5"/></svg></span>News & Events</a></li>
           <li><a href="contact.html" class="nav-link is-active"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-.9 1.6-1.8 1.4C9.8 18.3 5.7 14.2 4.1 7.8 3.9 6.9 4.5 6 5.5 6"/></svg></span>Contact</a></li>
+          <li><a href="admin-login.html" class="nav-link" style="opacity:.7"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Admin</a></li>
           <li><a href="contact.html" class="nav-cta">Apply Now</a></li>
         </ul>
       </nav>
@@ -88,7 +89,10 @@
             </div>
           </div>
 
-          <form class="contact-form reveal" id="contact-form" novalidate>
+          <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/muhammadjubril9000@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from the school website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-row">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required>

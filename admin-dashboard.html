@@ -64,10 +64,78 @@
       </div>
     </section>
 
+    <section class="admin-panel">
+      <h2 id="gallery-form-heading">Add a Gallery Photo</h2>
+      <form id="gallery-form">
+        <div class="admin-form-row">
+          <label for="gallery-caption">Caption</label>
+          <input type="text" id="gallery-caption" required>
+        </div>
+        <div class="admin-form-row">
+          <label for="gallery-image">Photo</label>
+          <input type="file" id="gallery-image" accept="image/*">
+          <p class="admin-note" id="gallery-image-hint" style="display:none;">Leave blank to keep the current photo.</p>
+        </div>
+        <div class="admin-checkbox-row">
+          <input type="checkbox" id="gallery-is-published" checked>
+          <label for="gallery-is-published">Visible on the public website</label>
+        </div>
+        <div class="admin-form-actions">
+          <button type="submit" class="btn" id="gallery-save-btn">Save Photo</button>
+          <button type="button" class="admin-btn-cancel" id="gallery-cancel-edit" style="display:none;">Cancel Edit</button>
+        </div>
+        <p class="admin-status" id="gallery-form-status"></p>
+      </form>
+
+      <div class="admin-post-list" id="gallery-list" style="margin-top:26px;">
+        <p class="admin-note">Loading gallery photos&hellip;</p>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <h2>Section Photos</h2>
+      <p class="admin-note" style="margin-bottom:20px;">These are the cover photos for Nursery, Primary and Secondary — they show on both the Academics page and the Home page.</p>
+      <div id="section-photos-list">
+        <p class="admin-note">Loading section photos&hellip;</p>
+      </div>
+    </section>
+
+    <section class="admin-panel">
+      <h2>Account Settings</h2>
+      <p class="admin-note" style="margin-bottom:20px;">Signed in as <strong id="current-email">&hellip;</strong></p>
+
+      <form id="email-form" style="margin-bottom:30px;">
+        <div class="admin-form-row">
+          <label for="new-email">Change Email</label>
+          <input type="email" id="new-email" placeholder="new-email@example.com" required>
+        </div>
+        <button type="submit" class="btn" id="email-btn">Update Email</button>
+        <p class="admin-status" id="email-status"></p>
+      </form>
+
+      <form id="password-form">
+        <div class="admin-grid-2">
+          <div class="admin-form-row">
+            <label for="new-account-password">New Password</label>
+            <input type="password" id="new-account-password" required minlength="6" autocomplete="new-password">
+          </div>
+          <div class="admin-form-row">
+            <label for="confirm-account-password">Confirm New Password</label>
+            <input type="password" id="confirm-account-password" required minlength="6" autocomplete="new-password">
+          </div>
+        </div>
+        <button type="submit" class="btn" id="password-btn">Update Password</button>
+        <p class="admin-status" id="password-status"></p>
+      </form>
+    </section>
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/supabase-client.js"></script>
   <script src="js/admin.js"></script>
+  <script src="js/admin-gallery.js"></script>
+  <script src="js/admin-sections.js"></script>
+  <script src="js/admin-account.js"></script>
 </body>
 </html>

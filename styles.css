@@ -139,8 +139,8 @@ nav{ height:var(--header-h); display:flex; justify-content:space-between; align-
 .logo{ display:flex; align-items:center; gap:12px; }
 .logo img{ width:42px; height:42px; object-fit:contain; }
 .logo-text{ display:flex; flex-direction:column; line-height:1.25; }
-.logo-text strong{ color:var(--green-dark); font-size:16px; font-family:var(--font-display); letter-spacing:-.01em; }
-.logo-text em{ color:var(--gold-deep); font-size:10.5px; font-style:normal; letter-spacing:.08em; text-transform:uppercase; font-weight:600; }
+.logo-text strong{ color:var(--green-dark); font-size:16px; font-family:var(--font-display); letter-spacing:-.01em; white-space:nowrap; }
+.logo-text em{ color:var(--gold-deep); font-size:10.5px; font-style:normal; letter-spacing:.08em; text-transform:uppercase; font-weight:600; white-space:nowrap; }
 
 .menu-toggle{ width:34px; height:26px; display:flex; flex-direction:column; justify-content:space-between; position:relative; }
 .menu-toggle span{ display:block; height:2px; width:100%; background:var(--green-dark); border-radius:2px; transition:transform .3s var(--ease), opacity .25s var(--ease); }
@@ -558,29 +558,6 @@ footer::before{ content:""; position:absolute; top:0; left:0; right:0; height:3p
 
 @media(min-width:768px){
 
-    .nav-links{
-        position:static; height:auto; width:auto; background:none; box-shadow:none;
-        flex-direction:row; align-items:center; padding:0; overflow:visible; transform:none;
-    }
-    .mobile-nav-head{ display:none; }
-    .nav-links li{ border:none; position:relative; }
-    .nav-links > li > a{ padding:10px 14px; border-radius:8px; font-size:.87rem; gap:8px; }
-    .nav-links a:hover{ background:var(--green-tint); }
-    .nav-cta{ margin:0 0 0 8px; padding:11px 22px !important; }
-    .menu-toggle, .nav-overlay{ display:none; }
-    .nav-icon{ width:17px; height:17px; }
-
-    .has-dropdown .dropdown{
-        display:block; position:absolute; top:calc(100% + 12px); left:0; min-width:210px;
-        background:var(--white); border-radius:12px; box-shadow:var(--shadow-md);
-        opacity:0; visibility:hidden; transform:translateY(8px);
-        transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
-        padding:8px 0;
-    }
-    .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown{ opacity:1; visibility:visible; transform:translateY(0); }
-    .dropdown a{ padding:11px 20px; }
-    .dropdown a:hover{ background:var(--green-tint); }
-
     .hero{ text-align:left; }
     .hero-buttons{ flex-direction:row; }
     .hero-float-card{ grid-template-columns:repeat(3,1fr); }
@@ -629,4 +606,40 @@ footer::before{ content:""; position:absolute; top:0; left:0; right:0; height:3p
 
     .about h2, .academics h2, .values h2, .why-us h2, .facilities h2,
     .gallery h2, .contact h2, .testimonials h2, .faq h2, .news h2, .admissions h2, .stats-band h2{ font-size:2.5rem; }
+}
+
+/* ==========================================================
+   WIDE NAV — the inline nav only switches on here.
+   With 9 items (7 pages + Admin + Apply Now) plus the full
+   logo, 768px isn't enough room: the logo text was wrapping
+   and colliding with the nav links. Below this width the
+   hamburger menu keeps handling navigation instead — that's
+   a completely normal, expected pattern at this many items,
+   not a fallback to be embarrassed about.
+========================================================== */
+
+@media(min-width:1180px){
+
+    .nav-links{
+        position:static; height:auto; width:auto; background:none; box-shadow:none;
+        flex-direction:row; align-items:center; padding:0; overflow:visible; transform:none;
+    }
+    .mobile-nav-head{ display:none; }
+    .nav-links li{ border:none; position:relative; }
+    .nav-links > li > a{ padding:9px 12px; border-radius:8px; font-size:.85rem; gap:7px; }
+    .nav-links a:hover{ background:var(--green-tint); }
+    .nav-cta{ margin:0 0 0 6px; padding:10px 20px !important; }
+    .menu-toggle, .nav-overlay{ display:none; }
+    .nav-icon{ width:16px; height:16px; }
+
+    .has-dropdown .dropdown{
+        display:block; position:absolute; top:calc(100% + 12px); left:0; min-width:210px;
+        background:var(--white); border-radius:12px; box-shadow:var(--shadow-md);
+        opacity:0; visibility:hidden; transform:translateY(8px);
+        transition:opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
+        padding:8px 0;
+    }
+    .has-dropdown:hover .dropdown, .has-dropdown:focus-within .dropdown{ opacity:1; visibility:visible; transform:translateY(0); }
+    .dropdown a{ padding:11px 20px; }
+    .dropdown a:hover{ background:var(--green-tint); }
 }

@@ -49,6 +49,7 @@
           <li><a href="gallery.html" class="nav-link"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17.5l5-5 3.5 3.5 3-3L20.5 17"/></svg></span>Gallery</a></li>
           <li><a href="news.html" class="nav-link"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 5.5h11a1.5 1.5 0 0 1 1.5 1.5v11.5H6a1.5 1.5 0 0 1-1.5-1.5V5.5z"/><path d="M17 8.5h2a1 1 0 0 1 1 1V17a1.5 1.5 0 0 1-1.5 1.5"/><path d="M7.5 9h5M7.5 12h5M7.5 15h3.5"/></svg></span>News & Events</a></li>
           <li><a href="contact.html" class="nav-link"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3c0 1-.9 1.6-1.8 1.4C9.8 18.3 5.7 14.2 4.1 7.8 3.9 6.9 4.5 6 5.5 6"/></svg></span>Contact</a></li>
+          <li><a href="admin-login.html" class="nav-link" style="opacity:.7"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>Admin</a></li>
           <li><a href="contact.html" class="nav-cta">Apply Now</a></li>
         </ul>
       </nav>
@@ -169,7 +170,7 @@
         <p class="section-text">A clear academic pathway from a child's very first class to their final year.</p>
         <div class="academic-grid reveal-stagger">
           <article class="card" id="nursery">
-            <div class="card-photo"><img src="https://images.unsplash.com/photo-1632932693914-89b90ae3d16d?auto=format&fit=crop&w=900&q=80" alt="Nursery pupils learning together"></div>
+            <div class="card-photo"><img src="https://images.unsplash.com/photo-1632932693914-89b90ae3d16d?auto=format&fit=crop&w=900&q=80" alt="Nursery pupils learning together" data-section-photo="nursery"></div>
             <div class="card-body">
               <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2.8 0-5 2.2-5 5 0 3 2.2 6 5 9 2.8-3 5-6 5-9 0-2.8-2.2-5-5-5z"/><circle cx="12" cy="8" r="2"/></svg></span>
               <h3>Nursery School</h3>
@@ -182,7 +183,7 @@
             </div>
           </article>
           <article class="card" id="primary">
-            <div class="card-photo"><img src="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?auto=format&fit=crop&w=900&q=80" alt="Primary school pupils in class"></div>
+            <div class="card-photo"><img src="https://images.unsplash.com/photo-1521493959102-bdd6677fdd81?auto=format&fit=crop&w=900&q=80" alt="Primary school pupils in class" data-section-photo="primary"></div>
             <div class="card-body">
               <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5C4 4.7 4.7 4 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5v-13z"/><path d="M20 5.5c0-.8-.7-1.5-1.5-1.5H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5v-13z"/></svg></span>
               <h3>Primary School</h3>
@@ -195,7 +196,7 @@
             </div>
           </article>
           <article class="card" id="secondary">
-            <div class="card-photo"><img src="https://images.unsplash.com/photo-1548102249-acdce64fffbd?auto=format&fit=crop&w=900&q=80" alt="Secondary school students in uniform"></div>
+            <div class="card-photo"><img src="https://images.unsplash.com/photo-1548102249-acdce64fffbd?auto=format&fit=crop&w=900&q=80" alt="Secondary school students in uniform" data-section-photo="secondary"></div>
             <div class="card-body">
               <span class="icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5L2 9.5z"/><path d="M6 11.7v4.3c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-4.3"/><path d="M20 9.5V15"/></svg></span>
               <h3>Secondary School</h3>
@@ -322,7 +323,7 @@
         <p class="eyebrow">Gallery</p>
         <h2>Life at First Academy Foundation</h2>
         <p class="section-text">A glimpse into our learning environment and memorable school moments. Click any photo to enlarge.</p>
-        <div class="gallery-grid reveal-stagger">
+        <div class="gallery-grid reveal-stagger" id="gallery-grid-preview">
           <button class="gallery-item" data-full="images/graduation.jpg" data-caption="Graduation Ceremony">
             <img src="images/graduation.jpg" alt="Graduation Ceremony">
             <span class="gallery-caption">Graduation Ceremony</span>
@@ -394,12 +395,12 @@
       <div class="container">
         <p class="eyebrow">Latest Updates</p>
         <h2>News &amp; Events</h2>
-        <p class="section-text"></p>
+        <p class="section-text">Sample placeholder entries — replace these with your school's real announcements, term dates and events.</p>
         <div class="news-grid reveal-stagger">
           <article class="news-card">
             <img src="images/graduation.jpg" alt="Graduation ceremony">
             <div class="news-card-body">
-              <span class="news-date">26/7/2025</span>
+              <span class="news-date">Sample Date</span>
               <h3>Graduation Ceremony Highlights</h3>
               <p>A recap of this year's graduating class and the achievements celebrated on the day.</p>
             </div>
@@ -407,7 +408,7 @@
           <article class="news-card">
             <img src="images/teachers-day.jpg" alt="Teachers' Day celebration">
             <div class="news-card-body">
-              <span class="news-date">5/4/2026</span>
+              <span class="news-date">Sample Date</span>
               <h3>Teachers&rsquo; Day Celebration</h3>
               <p>Honouring the dedication of our teaching staff with a day of appreciation and activities.</p>
             </div>
@@ -415,7 +416,7 @@
           <article class="news-card">
             <img src="images/parents.jpg" alt="Parents event">
             <div class="news-card-body">
-              <span class="news-date">16/8/2025</span>
+              <span class="news-date">Sample Date</span>
               <h3>Parents &amp; Community Day</h3>
               <p>Parents joined us on campus to connect with teachers and take part in school activities.</p>
             </div>
@@ -449,7 +450,10 @@
               </iframe>
             </div>
           </div>
-          <form class="contact-form reveal" id="contact-form" novalidate>
+          <form class="contact-form reveal" id="contact-form" action="https://formsubmit.co/muhammadjubril9000@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New message from the school website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <div class="form-row">
               <label for="name">Full Name</label>
               <input type="text" id="name" name="name" required>
@@ -528,6 +532,10 @@
   <a href="https://wa.me/2348030772462" id="whatsapp-float" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-1.5-.7-2.4-1.3-3.4-2.9-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3z"/><path d="M12 21.5c-1.5 0-3-.4-4.3-1.1L4 21.5l1.1-3.6a8.9 8.9 0 0 1-1.2-4.5C3.9 8 7.5 4.5 12 4.5s8.1 3.5 8.1 8-3.6 9-8.1 9z"/></svg></a>
   <button id="back-to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-client.js"></script>
+  <script src="js/section-photos-loader.js"></script>
+  <script src="js/gallery-preview-loader.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
