@@ -57,13 +57,13 @@
   var header = document.getElementById("site-header");
   function onScrollHeader() {
     if (!header) return;
-    if (window.scrollY > 10) header.style.boxShadow = "0 8px 26px rgba(15,36,20,.12)";
+    if (window.scrollY > 10) header.style.boxShadow = "0 1px 2px rgba(15,36,20,.04), 0 10px 24px rgba(15,36,20,.08)";
     else header.style.boxShadow = "";
   }
   document.addEventListener("scroll", onScrollHeader, { passive: true });
 
   /* ---------- Scroll reveal ---------- */
-  var revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
+  var revealEls = document.querySelectorAll(".reveal, .reveal-scale, .reveal-stagger");
   if (window.IntersectionObserver && revealEls.length && !reduceMotion) {
     var revealObserver = new IntersectionObserver(function (entries, obs) {
       entries.forEach(function (entry) {
@@ -76,6 +76,25 @@
     revealEls.forEach(function (el) { revealObserver.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  /* ---------- Heading ink-in + ledger rule draw ---------- */
+  var headingSelector = ".about h2, .academics h2, .values h2, .why-us h2, .facilities h2, " +
+    ".gallery h2, .contact h2, .testimonials h2, .faq h2, .news h2, .admissions h2, .stats-band h2, " +
+    ".teacher-banner-overlay h2, .message-text h2";
+  var headingEls = document.querySelectorAll(headingSelector);
+  if (window.IntersectionObserver && headingEls.length && !reduceMotion) {
+    var headingObserver = new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4, rootMargin: "0px 0px -40px 0px" });
+    headingEls.forEach(function (el) { headingObserver.observe(el); });
+  } else {
+    headingEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
   /* ---------- In-page anchor highlighting ---------- */
